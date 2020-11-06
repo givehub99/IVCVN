@@ -2,6 +2,7 @@ log.txt
 traceback.txt
 errors.txt
 *.save
+*.rpyb
 .gitignore
 README.md
 persistent
