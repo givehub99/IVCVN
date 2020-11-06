@@ -4,6 +4,5 @@ errors.txt
 *.save
 *.rpyb
 .gitignore
-README.md
 persistent
 navigation.json
