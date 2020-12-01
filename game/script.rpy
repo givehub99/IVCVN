@@ -11,6 +11,8 @@ label start:
     # This makes the narrator say Welcome to the game. By default no name is displayed in the name box.
     "Welcome to the game."
 
+    "VARSITY GOLF CHRISTIAN 2020"
+
     # call the label. it's like calling a function.
     call set_players_name
 
