@@ -9,7 +9,7 @@ label start:
     # comments start with the pound sign
 
     # This makes the narrator say Welcome to the game. By default no name is displayed in the name box.
-    "Welcome to the game."
+    "Welcome to the game. My name is Lauren and I love Christian"
 
     # call the label. it's like calling a function.
     call set_players_name
