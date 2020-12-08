@@ -2,7 +2,7 @@
 # this is useful so we can use saves from previous versions of the game without it crashing because a variable isn't initialized!
 default players_name = "Jane Doe"
 
-define chris = Character("Christian", color="#000")
+define chris = Character("Christian", color="#fff")
 
 # labels are kind of like functions. they can be called. in ren'py they can 
 # also be jumped to, which means it won't return to the point where it was called.
