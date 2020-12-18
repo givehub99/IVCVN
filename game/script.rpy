@@ -13,6 +13,7 @@ label start:
     # This makes the narrator say Welcome to the game. By default no name is displayed in the name box.
 
     scene bg doggo1
+    
 
     "Welcome to the game."
 
