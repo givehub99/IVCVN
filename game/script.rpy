@@ -11,6 +11,9 @@ label start:
     # comments start with the pound sign
 
     # This makes the narrator say Welcome to the game. By default no name is displayed in the name box.
+
+    scene bg doggo
+
     "Welcome to the game."
 
     "VARSITY GOLF CHRISTIAN 2020"
