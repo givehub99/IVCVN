@@ -4,6 +4,8 @@ default players_name = "Jane Doe"
 
 define chris = Character("Christian", color="#fff")
 
+define huntyr = Character("Huntyr", color="#fff")
+
 # labels are kind of like functions. they can be called. in ren'py they can 
 # also be jumped to, which means it won't return to the point where it was called.
 
@@ -12,20 +14,52 @@ label start:
 
     # This makes the narrator say Welcome to the game. By default no name is displayed in the name box.
 
+    "VARSITY GOLF CHRISTIAN 2020"
+
+    chris "i love golf. it's just so amazing, like Lauren."
+
     scene bg doggo1
     
 
     "Welcome to the game."
-
-    "VARSITY GOLF CHRISTIAN 2020"
-
-    chris "i love golf. it's just so amazing, like Lauren."
 
     # call the label. it's like calling a function.
     call set_players_name
 
     "Your name is [players_name]."
 
+
+    
+
+    #the real story begins lmao
+    
+    "The lights are dim. There’s so much noise around me, but I’m so nervous I’m practically deaf - and that music? I guess they’re so drunk they don’t even notice this music is from 2002."
+
+    "Oh God, there’s a couple making out on the couch. That’s uncomfortable to look at. I’ll look the other way. "
+    
+    "Wait, that’s Huntyr over there. Look at her, she’s completely drunk."
+
+    scene bg drunk doggo
+    with fade
+
+    "I can’t believe I let her talk me into this"
+
+    "Wait, I just got a text from her, while she’s literally making out with someone. Talk about a multi-tasker."
+
+    huntyr "***stop staring you perv***"
+
+    menu:
+        "Text you want to leave":
+            players_name "***I want to go home***"
+            huntyr "***fuk of go play w ur magic or wutever***" 
+
+        "Walk away":
+            "She’s too drunk. I can bother her about leaving later. Should’ve listened to Mom and Dad. "
+
+
+    "I miss being close to Huntyr. "
+
+    
     "This is the end of the example for now."
 
     # end of the label. return is technically not needed, but better for organization in my opinion.
