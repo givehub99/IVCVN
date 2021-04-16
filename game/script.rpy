@@ -6,6 +6,10 @@ define chris = Character("Christian", color="#fff")
 
 define huntyr = Character("Huntyr", color="#fff")
 
+define boy = Character("Boy", color="#fff")
+
+define boy2 = Character("Boy #2", color="#fff")
+
 # labels are kind of like functions. they can be called. in ren'py they can 
 # also be jumped to, which means it won't return to the point where it was called.
 
@@ -58,7 +62,38 @@ label start:
 
 
     "I miss being close to Huntyr. "
+    "When I was a kid, Huntyr used to always stick up for me."
+    "Mom always told Huntyr it was her job as an older sibling to take care of me."
 
+    #flasback image of angry middle school boy standing over player
+
+    "I was bullied at our community pool by a middle schooler."
+    "He didn’t like that I accidentally splashed water in his mouth."
+    "Huntyr quickly dealt with him."
+
+    #image huntyr shooting a fireball at boy
+
+    #young angry huntyr
+    huntyr "Stay back!"
+
+    #scared boy
+    boy "Jesus Christ! You almost killed me!"
+
+    huntyr "The next one won't miss. Leave her alone."
+
+    "Mom was pissed. “Magic’s our a secret,” she scolded us."
+    "It didn’t matter to me. Huntyr was my hero."
+
+    #INT. PARTY (PRESENT) (PLAYER IS ALONE, DRINKING)
+    "Great, now I’m drunk too. How long has it been? Who the hell is that?"
+
+    boy2 "Hey, cutie. I’m heading out cuz this party’s fucked."
+    #wink?
+    boy2 "Here’s my number."
+
+    "Thank god he’s gone."
+
+    #IMAGE - PLAYER HOLDING PAPER WITH PHONE NUMBER, HOLDING BEER IN OTHER HAND
     
     "This is the end of the example for now."
 
