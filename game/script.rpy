@@ -189,6 +189,78 @@ label start:
         '"Normal" opening':
             jump normal
 
+    #IMAGE - PLAYER HOLDING PAPER WITH PHONE NUMBER, HOLDING BEER IN OTHER HAND
+
+    "What a douche, thinking I’ll call him."
+
+    #IMAGE - PLAYER FROSTING PAPER IN HAND
+
+    "Take that, loser."
+
+    huntyr "Hey!"
+
+    #INT. PARTY
+
+    "Holy fuck, she scared the shit out of me."
+
+    players_name "Where did you come from? I thought you were off making out with that guy."
+
+    huntyr "Who cares? What do you think you’re doing? You just burned that paper, where anybody could’ve seen."
+
+    players_name "Not like you were here to stop me."
+    #angry
+    huntyr "Fine, don’t listen to me. Why would I try and help the person who gave me this scar?"
+    #Flashing scar
+
+    players_name "Do you really have to bring that up now? We were kids."
+
+    huntyr "And now neither of us get to use our powers at home. It’ll get much worse if we get caught using it at a party."
+
+    "Boy #3" "Using what?"
+
+    huntyr "Oh shit."
+    #(fake smile)
+    huntyr "Hey! Tooo..."
+
+    thom "Thomas. We were just making out, how did you forget my name?"
+
+    huntyr "Hehe. Who cares. This is just my sister."
+    #(flirty)
+    huntyr "Why don’t you and I go somewhere more private..."
+
+    #(smiling)
+    thom "Fine, but you better not ditch me again."
+
+    huntyr "Go on ahead, I’m almost done her"
+
+    "Thomas leaves and Huntyr turns back to me, still angry."
+
+    huntyr "Anyways, look. There’s a cute guy over there with Nicolette from Statistics. 
+        + "I talked to her earlier, she knows you’re coming, and is setting you up. Just do some normal people stuff."
+
+    "Now she decides to get all “older sibling savior” on me? 
+        + "So annoying, wish she would just keep one mask on instead of switching back and forth."
+    "..."
+    "Guess that guy IS cute. Fine. One more cup of liquid courage."
+
+    #Cut to:
+    nico "There you are! Let me introduce you to Christian."
+
+    menu:
+        "Flirty opening":
+            jump flirty
+
+        '''"Normal" opening'''
+            jump normal
+
+        "Letterman jacket"
+            jump Letterman
+
+        "Classes"
+            jump Classes
+
+        "Drink"
+            jump drink
     # end of the label. return is technically not needed, but better for organization in my opinion.
     return
 
