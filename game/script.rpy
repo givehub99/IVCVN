@@ -235,11 +235,9 @@ label start:
 
     "Thomas leaves and Huntyr turns back to me, still angry."
 
-    huntyr "Anyways, look. There’s a cute guy over there with Nicolette from Statistics. 
-        + "I talked to her earlier, she knows you’re coming, and is setting you up. Just do some normal people stuff."
+    huntyr "Anyways, look. There’s a cute guy over there with Nicolette from Statistics. I talked to her earlier, she knows you’re coming, and is setting you up. Just do some normal people stuff."
 
-    "Now she decides to get all “older sibling savior” on me? 
-        + "So annoying, wish she would just keep one mask on instead of switching back and forth."
+    "Now she decides to get all “older sibling savior” on me? So annoying, wish she would just keep one mask on instead of switching back and forth."
     "..."
     "Guess that guy IS cute. Fine. One more cup of liquid courage."
 
@@ -250,17 +248,10 @@ label start:
         "Flirty opening":
             jump flirty
 
-        '''"Normal" opening'''
+        "Normal opening":
             jump normal
 
-        "Letterman jacket"
-            jump Letterman
-
-        "Classes"
-            jump Classes
-
-        "Drink"
-            jump drink
+    
     # end of the label. return is technically not needed, but better for organization in my opinion.
     return
 
@@ -274,6 +265,7 @@ label flirty:
     "Christian liked that. Nice job, me."
 
     jump followup
+    return
 
 label normal:
     #(chill)
@@ -288,6 +280,7 @@ label normal:
     nico "Haha... Anyway..."
 
     jump followup
+    return
 
 label followup:
     nico "I’ll leave you two lovebirds alone now, I’m sure you guys have a lot to talk about."
@@ -295,6 +288,9 @@ label followup:
     "Nicolette disappears into the sea of people."
 
     chris "So... What do you wanna talk about?"
+
+    jump talk
+    return
 
 label talk:
 
@@ -375,6 +371,8 @@ label talk:
             players_name "Thanks. You’re cute yourself."
             jump end
 
+    return
+
 label end:
     "I hear some crashes and screams from the bedroom where Huntyr is."
 
@@ -407,6 +405,6 @@ label end:
 
     "End of Act 1"
 
-    #return
+    return
 
 
