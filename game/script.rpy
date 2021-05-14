@@ -18,6 +18,7 @@ default letterman = False
 default classes = False
 default drink = False
 
+define audio.partybgm = "music/party bgm.mp3"
 image black = "#000"
 # labels are kind of like functions. they can be called. in ren'py they can 
 # also be jumped to, which means it won't return to the point where it was called.
@@ -50,9 +51,9 @@ label start:
 
     # This makes the narrator say Welcome to the game. By default no name is displayed in the name box.
 
-    "VARSITY GOLF CHRISTIAN 2020"
+    # "VARSITY GOLF CHRISTIAN 2020"
 
-    chris "i love golf. it's just so amazing, like Lauren."
+    # chris "i love golf. it's just so amazing, like Lauren."
 
     scene bg doggo1
     
@@ -68,6 +69,8 @@ label start:
     
 
     #the real story begins lmao
+
+    play music partybgm fadein 1.0 fadeout 1.0
     
     "The lights are dim. There’s so much noise around me, but I’m so nervous I’m practically deaf - and that music? I guess they’re so drunk they don’t even notice this music is from 2002."
 
@@ -93,11 +96,16 @@ label start:
             "She’s too drunk. I can bother her about leaving later. Should’ve listened to Mom and Dad. "
 
 
+    stop music fadeout 1.0
+    show black
+    with fade
     "I miss being close to Huntyr. "
     "When I was a kid, Huntyr used to always stick up for me."
     "Mom always told Huntyr it was her job as an older sibling to take care of me."
 
-    #flasback image of angry middle school boy standing over player
+    #flashback image of angry middle school boy standing over player
+    scene bg angry doggo
+    with fade
 
     "I was bullied at our community pool by a middle schooler. He didn’t like that I accidentally splashed water in his mouth."
     "Huntyr quickly dealt with him."
@@ -115,7 +123,10 @@ label start:
     "Mom was pissed. “Magic’s our a secret,” she scolded us."
     "It didn’t matter to me. Huntyr was my hero."
 
+    play music partybgm fadein 1.0 fadeout 1.0
     #INT. PARTY (PRESENT) (PLAYER IS ALONE, DRINKING)
+    scene bg drunk doggo
+    with fade
     "Great, now I’m drunk too. How long has it been? Who the hell is that?"
 
     boy2 "Hey, cutie. I’m heading out cuz this party’s fucked."
@@ -292,8 +303,7 @@ label followup:
     jump talk
     return
 
-label talk:
-
+label talk_menu:
     menu: 
         "Letterman" if not letterman:
             $ letterman = True
@@ -305,7 +315,6 @@ label talk:
             "Golf? Seriously? You’re lucky you’re cute."
             players_name "That’s so cool!"
             "No, it isn’t. Think of a new topic. Now."
-            call talk
 
         "Classes" if not classes:
             $ classes = True
@@ -326,7 +335,6 @@ label talk:
             chris "Pretty weird, huh!"
 
             "Mr. Kennedy, eh? Maybe I should pay him a visit sometime. But I should shift the conversation. Don’t want Christian here lingering on this too long or he might actually start to use his brain."
-            call talk
 
         "Drink" if not drink:
             $ drink = True
@@ -345,8 +353,13 @@ label talk:
             chris "It’s that, but it’s all the beer and alcohol I could find in this house. Wine, beer, vodka, you name it, it’s in this cup right here."
 
             "I’m gagging. Change the topic now."
-            call talk
 
+    if not drink or not classes or not letterman:
+        call talk_menu
+    return
+
+label talk:
+    call talk_menu
 
     "Fuck. I can’t think of any more topics."
 
@@ -360,7 +373,7 @@ label talk:
             "I say nothing back"
             jump end
 
-        "Compiment him back":
+        "Compliment him back":
             "Better say something back, just to make it not awkward."
             players_name "You're cute too."
             "He laughs and takes another drink from his cup."
